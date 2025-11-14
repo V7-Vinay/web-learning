@@ -1,0 +1,85 @@
+<!-- border-width,border-color,border-side 
+ are differernt properties 
+ which can be used from short hand property
+ as used below
+ also border-radius can be given
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Border Style Demonstration</title>
+  <style>
+    /* Base styling for demonstration boxes */
+    .box {
+      width: 200px;
+      height: 100px;
+      margin: 10px;
+      padding: 10px;
+      text-align: center;
+      line-height: 100px;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      color: #333;
+    }
+    
+    /* Border style classes */
+    .dotted {
+      border: medium dotted #ff0000; /* Red dotted border */
+    }
+    .dashed {
+      border: thin dashed #00ff00;
+      border-radius: 50px;/* border radius*/
+       /* Green dashed border */
+    }
+    .solid {
+      border: thick solid #0000ff; /* Blue solid border */
+    }
+    .double {
+      border: 5px double #ff00ff; /* Magenta double border */
+    }
+    .groove {
+      border: 5px groove #00ffff; /* Cyan groove border */
+    }
+    .ridge {
+      border: 5px ridge #ffff00; /* Yellow ridge border */
+    }
+    .inset {
+      border: 5px inset #cccccc; /* Light gray inset border */
+    }
+    .outset {
+      border: 5px outset #888888; /* Dark gray outset border */
+    }
+    .none {
+      border: 5px solid transparent; /* No visible border */
+    }
+    .hidden {
+      border: 5px hidden; /* Hidden border; will not display */
+    }
+    /* For mix, demonstrating different styles on each side:
+       Top: dotted, Right: dashed, Bottom: solid, Left: double */
+    .mix {
+      border-style: dotted dashed solid double;
+      border-width: 5px 10px 15px 20px;
+      border-color: red green blue purple;
+    }
+  </style>
+</head>
+<body>
+  <h1>Border Style Demonstration</h1>
+  
+  <div class="box dotted">Dotted Border</div>
+  <div class="box dashed">Dashed Border</div>
+  <div class="box solid">Solid Border</div>
+  <div class="box double">Double Border</div>
+  <div class="box groove">Groove Border</div>
+  <div class="box ridge">Ridge Border</div>
+  <div class="box inset">Inset Border</div>
+  <div class="box outset">Outset Border</div>
+  <div class="box none">No Border</div>
+  <div class="box hidden">Hidden Border</div>
+  <div class="box mix">Mixed Border</div>
+  
+</body>
+</html>

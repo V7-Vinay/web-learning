@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Margin Concept Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      text-align: center;
+      padding: 20px;
+    }
+    
+    .container {
+      width: 80%;
+      margin: auto auto;
+      background: #fff;
+      padding: 20px;
+      border: 2px solid #ddd;
+    }
+    
+    /* Box with uniform margin (same margin on all sides) */
+    .box {
+      background-color: #4CAF50;
+      color: #fff;
+      padding: 20px;
+      margin: 10px; /* 10px margin on top, right, bottom, and left */
+      border: 2px solid #333;
+    }
+    
+    /* Box with individual margins */
+    .box-individual {
+      background-color: #2196F3;
+      color: #fff;
+      padding: 20px;
+      margin-top: 30px;
+      margin-right: 50px;
+      margin-bottom: 20px;
+      margin-left: 10px;
+      border: 2px solid #333;
+    }
+    
+    /* Box using margin shorthand with two values: 
+       First value applies to top & bottom, 
+       Second value applies to left & right */
+    .box-shorthand {
+      background-color: #f44336;
+      color: #fff;
+      padding: 20px;
+      margin: 30px 10px; /* 30px for top/bottom and 100px for left/right */
+      border: 2px solid #333;
+    }
+  </style>
+</head>
+<body>
+  <h1>Understanding CSS Margin</h1>
+  <div class="container">
+    <h2>Uniform Margin</h2>
+    <div class="box">Margin: 10px on all sides</div>
+    
+    <h2>Individual Margins</h2>
+    <div class="box-individual">Margin: 20px top, 50px right, 20px bottom, 50px left</div>
+    
+    <h2>Shorthand Margin (Two Values)</h2>
+    <div class="box-shorthand">Margin: 30px top/bottom, 100px left/right</div>
+  </div>
+</body>
+</html>

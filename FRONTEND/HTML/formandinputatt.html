@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Attributes in HTML</title>
+</head>
+<body>
+
+    <h1>HTML Form Attributes Demo</h1>
+
+    <!-- FORM ELEMENT DEMONSTRATING VARIOUS ATTRIBUTES -->
+    <form action="/submit" method="post" autocomplete="on" enctype="multipart/form-data" novalidate target="_blank">
+        
+        <!-- 1. action: URL to send the form data -->
+        <!-- 2. method: HTTP method (get/post) -->
+        <!-- 3. autocomplete: Suggests previously typed inputs -->
+        <!-- 4. enctype: Defines how form data should be encoded (for file uploads) -->
+        <!-- 5. novalidate: Disables HTML5 validation -->
+        <!-- 6. target: Opens response in a new tab (_blank) -->
+
+        <!-- INPUT ELEMENTS WITH FORM ATTRIBUTES -->
+
+        <!-- 7. type: Specifies the type of input (text, email, password, etc.) -->
+        <!-- 8. name: Name of the input (used in form submission) -->
+        <!-- 9. value: Pre-filled value in the input -->
+        <!-- 10. placeholder: Hint text inside the input box -->
+        <!-- 11. required: Ensures the input must be filled before submission -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your name" required><br><br>
+
+        <!-- 12. minlength: Minimum length of characters allowed -->
+        <!-- 13. maxlength: Maximum length of characters allowed -->
+        <!-- 14. pattern: Regex pattern for input validation -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" minlength="6" maxlength="12" pattern="[a-zA-Z0-9]+" required><br><br>
+
+        <!-- 15. readonly: User cannot modify the value -->
+        <label for="readonly">Read-Only Field:</label>
+        <input type="text" id="readonly" value="Not Editable" readonly><br><br>
+
+        <!-- 16. disabled: Disables input (cannot be edited or submitted) -->
+        <label for="disabled">Disabled Field:</label>
+        <input type="text" id="disabled" value="Disabled" disabled><br><br>
+
+        <!-- 17. step: Increments for numeric inputs -->
+        <label for="quantity">Quantity (step of 5):</label>
+        <input type="number" id="quantity" name="quantity" step="5" min="0" max="50"><br><br>
+
+        <!-- 18. multiple: Allows multiple file selection -->
+        <label for="file">Upload Files:</label>
+        <input type="file" id="file" name="files" multiple><br><br>
+
+        <!-- 19. accept: Specifies the file types allowed -->
+        <label for="profile-pic">Upload Image:</label>
+        <input type="file" id="profile-pic" accept="image/png, image/jpeg"><br><br>
+
+        <!-- 20. autofocus: Focuses this input on page load -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" autofocus><br><br>
+
+        <!-- 21. size: Width of the input in characters -->
+        <label for="short">Short Text:</label>
+        <input type="text" id="short" name="short" size="10"><br><br>
+
+        <!-- SELECT DROPDOWN WITH ATTRIBUTES -->
+        <!-- 22. size (in select): Number of visible options -->
+        <!-- 23. multiple: Select multiple options -->
+        <label for="fruits">Select Fruits:</label>
+        <select id="fruits" name="fruits" size="3" multiple>
+            <option value="apple">Apple</option>
+            <option value="orange">Orange</option>
+            <option value="banana">Banana</option>
+            <option value="grape">Grape</option>
+        </select><br><br>
+
+        <!-- TEXTAREA WITH ATTRIBUTES -->
+        <!-- 24. rows: Visible rows -->
+        <!-- 25. cols: Visible columns -->
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" rows="4" cols="30" spellcheck="true"></textarea><br><br>
+
+        <!-- BUTTONS -->
+        <!-- 26. type: submit/reset/button -->
+        <!-- 27. formnovalidate: Bypass validation for this button -->
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+        <button type="submit" formnovalidate>Submit Without Validation</button>
+
+    </form>
+
+</body>
+</html>

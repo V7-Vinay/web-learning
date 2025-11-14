@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Height & Width Values Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      text-align: center;
+      margin: 20px;
+    }
+    /* Container for percentage demonstration */
+    .container {
+      width: 600px;
+      height: 400px;
+      border: 2px dashed #666;
+      margin: 20px auto;
+      padding: 10px;
+      position: relative;
+      background: #fff;
+    }
+    /* Basic styling for all boxes */
+    .box {
+      border: 2px solid #333;
+      background: #f0f0f0;
+      margin: 10px;
+      padding: 10px;
+      display: inline-block;
+      vertical-align: top;
+    }
+    /* auto (default): Browser calculates size based on content */
+    .auto {
+      background: #ffcccc;
+      /* No explicit width/height set → auto */
+    }
+    /* length: Using fixed length values (px, cm, etc.) */
+    .length {
+      width: 200px;
+      height: 150px;
+      background: #ccffcc;
+    }
+    /* %: Sizing relative to the containing block (here, .container) */
+    .percent {
+      width: 50%;
+      height: 50%;
+      background: #ccccff;
+    }
+    /* initial: Resets to the default value (usually auto) */
+    .initial {
+      width: initial;
+      height: initial;
+      background: #ffccff;
+      padding: 20px;
+    }
+    /* Parent element with fixed size to demonstrate inherit */
+    .parent {
+      width: 300px;
+      height: 200px;
+      border: 2px solid #000;
+      margin: 20px auto;
+      padding: 10px;
+      background: #e0e0e0;
+    }
+    /* inherit: Takes the size from its parent element */
+    .inherit {
+      width: inherit;
+      height: inherit;
+      background: #ffffcc;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Height & Width Values</h1>
+  <p>
+    CSS height and width properties can be set using <strong>auto</strong>, <strong>fixed lengths</strong>, 
+    <strong>percentages</strong>, <strong>initial</strong>, or <strong>inherit</strong>.
+  </p>
+
+  <h2>Examples with Different Values</h2>
+  <!-- Auto, Length, Percent, and Initial Demonstration -->
+  <div class="container">
+    <div class="box auto">
+      <strong>auto:</strong><br>
+      Default sizing (based on content)
+    </div>
+    <div class="box length">
+      <strong>length:</strong><br>
+      200px width, 150px height
+    </div>
+    <div class="box percent">
+      <strong>%:</strong><br>
+      50% of container's width and height
+    </div>
+    <div class="box initial">
+      <strong>initial:</strong><br>
+      Resets to default (auto)
+    </div>
+  </div>
+
+  <h2>Inherit Example</h2>
+  <!-- Parent with defined dimensions and a child using inherit -->
+  <div class="parent">
+    Parent Element (300px x 200px)<br><br>
+    <div class="box inherit">
+      <strong>inherit:</strong><br>
+      Inherits parent's dimensions
+    </div>
+  </div><BR></BR>
+  
+  <p>
+    Note: The height and width properties set the size of the content area (inside padding, border, and margin).
+  </p>
+</body>
+</html>

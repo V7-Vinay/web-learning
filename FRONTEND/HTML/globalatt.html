@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Attributes Demo</title>
+</head>
+<body>
+
+    <!-- 1. id: Provides a unique identifier for the element -->
+    <h1 id="main-title">Global Attributes in HTML</h1>
+
+    <!-- 2. class: Specifies one or more class names for an element (used in CSS and JS) -->
+    <p class="highlight">This paragraph has a class for styling.</p>
+
+    <!-- 3. style: Inline CSS to style the element directly -->
+    <p style="color:blue; font-weight: bold;">This text is styled with inline CSS.</p>
+
+    <!-- 4. title: Tooltip text when hovering over the element -->
+    <button title="Click me to submit!">Submit</button>
+
+    <!-- 5. lang: Specifies the language of the element -->
+    <p lang="es">Este texto está en español.</p>
+
+    <!-- 6. dir: Text direction (ltr = left-to-right, rtl = right-to-left) -->
+    <p dir="rtl">هذا النص باللغة العربية.</p>
+
+    <!-- 7. hidden: Hides the element from view -->
+    <div hidden>This content is hidden from the user.</div>
+
+    <!-- 8. tabindex: Defines the tab order of elements (0 = default, -1 = not focusable) -->
+    <button tabindex="2">First Button</button>
+    <button tabindex="1">Second Button</button>
+
+    <!-- 9. contenteditable: Makes the element editable by the user -->
+    <div contenteditable="true">You can edit this text.</div>
+
+    <!-- 10. spellcheck: Enables/disables spell checking for input/textarea -->
+    <textarea spellcheck="true">Try typing with errors here...</textarea>
+
+    <!-- 11. draggable: Specifies if the element is draggable -->
+    <img src="https://via.placeholder.com/150" alt="Placeholder" draggable="true">
+
+    <!-- 12. translate: Specifies whether the content should be translated or not -->
+    <p translate="yes">Do not translate this text.</p>
+
+    <!-- 13. accesskey: Defines a shortcut key to activate or focus the element -->
+    <button accesskey="s">Press Alt + S to focus me</button>
+
+    <!-- 14. data-*: Custom data attributes to store extra data -->
+    <div data-user-id="12345">User Profile Section</div>
+
+    <!-- 15. contextmenu: Specifies the id of a <menu> to show when right-clicked -->
+    <div contextmenu="customMenu">Right-click here for a custom menu.</div>
+    <menu type="context" id="customMenu">
+        <menuitem label="Refresh" onclick="location.reload()"></menuitem>
+    </menu>
+
+    <!-- 16. role: Defines the role of an element for accessibility purposes -->
+    <nav role="navigation">This is a navigation bar.</nav>
+
+    <!-- 17. aria-label: Provides accessible labels for screen readers -->
+    <button aria-label="Close">X</button>
+
+    <!-- 18. aria-hidden: Hides the element from screen readers -->
+    <div aria-hidden="true">This content is hidden for accessibility tools.</div>
+
+    <!-- 19. on*: Event attributes (onclick, onmouseover, onload, etc.) -->
+    <button onclick="alert('Button Clicked!')">Click Me!</button>
+
+    <!-- 20. inputmode: Specifies the type of input expected (e.g., numeric, text) -->
+    <input type="text" inputmode="numeric" placeholder="Enter numbers only">
+
+    <!-- 21. autocapitalize: Controls text capitalization (none, sentences, words, characters) -->
+    <textarea autocapitalize="sentences">Start typing here...</textarea>
+
+    <!-- 22. inert: Disables user interaction (no focus, click, etc.) -->
+    <div inert>This section is inert (cannot be interacted with).</div>
+
+    <!-- 23. part: Specifies a shadow DOM part for styling -->
+    <div part="main-section">This is part of the main section.</div>
+
+    <!-- 24. enterkeyhint: Provides input hint on what action the Enter key should trigger -->
+    <input type="text" enterkeyhint="search" placeholder="Press Enter to send">
+
+    <!-- 25. is: Custom elements (used for web components) -->
+    <button is="custom-button">Custom Button</button>
+
+</body>
+</html>

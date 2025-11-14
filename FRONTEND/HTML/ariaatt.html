@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARIA Attributes Example</title>
+</head>
+<body>
+
+    <h2>ARIA (Accessible Rich Internet Applications) Attributes Example</h2>
+
+    <!-- 1. ARIA role for accessibility -->
+    <div role="banner">
+        <h1>Welcome to Our Website</h1>
+        <p>This is a heading with an ARIA role of 'banner'.</p>
+    </div>
+    
+    <!-- 2. ARIA label -->
+    <button aria-label="Close" onclick="alert('Closing')">X</button>
+    <!-- aria-label provides a description for an element that doesn't have visible text -->
+
+    <!-- 3. ARIA Live Region -->
+    <div aria-live="polite">
+        <p id="liveMessage">Loading new content...</p>
+    </div>
+    <!-- aria-live="polite" announces content updates to screen readers -->
+
+    <!-- 4. ARIA Described By -->
+    <input type="text" id="search" aria-describedby="searchHelp" placeholder="Search here">
+    <p id="searchHelp">Enter a keyword to search for relevant articles.</p>
+    <!-- aria-describedby provides additional descriptions for form controls -->
+
+    <!-- 5. ARIA Hidden -->
+    <button aria-hidden="true">Invisible Button</button>
+    <!-- aria-hidden="true" hides the button from assistive technologies -->
+
+    <!-- 6. ARIA Tabindex -->
+    <div role="tabpanel" tabindex="0">
+        <p>This is a tab panel with a tabindex attribute.</p>
+    </div>
+    <!-- tabindex makes an element focusable with keyboard navigation -->
+
+    <!-- 7. ARIA State and Properties -->
+    <div role="checkbox" aria-checked="false">
+        <label>Accept Terms and Conditions</label>
+    </div>
+    <!-- aria-checked="false" indicates the checkbox is not checked -->
+
+    <!-- 8. ARIA Expanded -->
+    <button aria-expanded="false" onclick="toggleContent()">Show More</button>
+    <div id="content" style="display:none;">
+        <p>Here is additional content that can be toggled.</p>
+    </div>
+    <!-- aria-expanded indicates whether a collapsible element is expanded or collapsed -->
+
+    <!-- 9. ARIA Live Update -->
+    <button onclick="updateContent()">Update Content</button>
+    <div aria-live="assertive" id="updateMessage"></div>
+    <!-- aria-live="assertive" gives high priority for screen readers to announce changes -->
+    
+    <script>
+        function toggleContent() {
+            var content = document.getElementById("content");
+            var button = document.querySelector("button[aria-expanded]");
+            if (content.style.display === "none") {
+                content.style.display = "block";
+                button.setAttribute("aria-expanded", "true");
+            } else {
+                content.style.display = "none";
+                button.setAttribute("aria-expanded", "false");
+            }
+        }
+
+        function updateContent() {
+            document.getElementById("updateMessage").textContent = "Content updated successfully!";
+        }
+    </script>
+
+</body>
+</html>

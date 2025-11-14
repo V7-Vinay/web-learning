@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anchor (Link) Attributes Example</title>
+</head>
+<body>
+
+    <h2>Anchor (Link) Attributes</h2>
+
+    <p><a href="https://www.example.com" target="_blank" title="Go to Example" id="link1">Visit Example (Open in New Tab)</a></p>
+    <!-- 1. href: Specifies the URL the link goes to -->
+    <!-- 2. target: Specifies where to open the linked document (_blank to open in a new tab) -->
+    <!-- 3. title: Provides additional information (tooltip when hovering over the link) -->
+    <!-- 4. id: Provides a unique identifier for the link (can be used for styling or scripting) -->
+
+    <p><a href="https://www.example.com/download" download="exampleFile.txt">Download Example File</a></p>
+    <!-- 5. download: Triggers a file download when the link is clicked, and provides a default filename -->
+
+    <p><a href="#section2" class="anchorLink">Go to Section 2</a></p>
+    <!-- 6. href: Defines an internal link that points to an ID on the same page -->
+    <!-- 7. class: Defines the CSS class that can be used to style the link -->
+
+    <p><a href="mailto:someone@example.com" subject="Feedback" body="Hello, I would like to discuss...">Email Us</a></p>
+    <!-- 8. href: Defines a mailto link that opens the user's default email client with a preset recipient email address -->
+    <!-- 9. subject: Defines the subject of the email (typically added as part of the mailto URI) -->
+    <!-- 10. body: Pre-fills the body of the email (added to the mailto URI) -->
+
+    <p><a href="https://www.example.com" ping="https://www.example.com/ping" referrerpolicy="no-referrer">Visit Example with Ping</a></p>
+    <!-- 11. ping: Sends a ping request to a URL when the link is clicked (used for tracking purposes) -->
+    <!-- 12. referrerpolicy: Specifies how much referrer information should be sent with the request -->
+
+    <p><a href="https://www.example.com" accesskey="f">Open Example with Access Key (Press 'f')</a></p>
+    <!-- 13. accesskey: Defines a shortcut key to activate or focus on the link -->
+
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Alignment, Direction, and Vertical Alignment Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    /* --- Text Alignment Demo --- */
+    .text-align-demo {
+      width: 500px;
+      border: 1px solid #000;
+      padding: 10px;
+      margin: 20px auto;
+      background: #fff;
+    }
+    .align-left { text-align: left; }
+    .align-right { text-align: right; }
+    .align-center { text-align: center; }
+    .align-justify { text-align: justify; }
+    
+    /* --- text-align-last Demo --- */
+    .text-align-last-demo {
+      width: 500px;
+      border: 1px solid blue;
+      padding: 10px;
+      margin: 20px auto;
+      background: #eef;
+      text-align: justify;
+      text-align-last: right;
+    }
+    
+    /* --- Direction and Unicode-Bidi Demo --- */
+    .rtl-demo {
+      width: 500px;
+      border: 1px solid green;
+      padding: 10px;
+      margin: 20px auto;
+      background: #efe;
+      /* Set text direction to right-to-left */
+      direction: rtl;
+      /* Embeds the bidirectional algorithm */
+      unicode-bidi: embed;
+    }
+    
+    /* --- Vertical Alignment Demo --- */
+    .vertical-align-demo {
+      width: 500px;
+      border: 1px dashed #aaa;
+      margin: 20px auto;
+      text-align: center;
+      font-size: 24px;
+      background: #fff;
+      padding: 10px;
+    }
+    .vertical-align-demo .box {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      background: #ff9999;
+      margin: 5px;
+      line-height: 50px;
+    }
+    /* Demonstrate different vertical-align values */
+    .va-baseline { vertical-align: baseline; }
+    .va-top { vertical-align: top; }
+    .va-middle { vertical-align: middle; }
+    .va-bottom { vertical-align: bottom; }
+  </style>
+</head>
+<body>
+  <h1>CSS Text Alignment & Vertical Alignment Demo</h1>
+  
+  <h2>Text Alignment Examples</h2>
+  <div class="text-align-demo align-left">
+    <p><strong>Left Align:</strong> This text is aligned to the left.</p>
+  </div>
+  <div class="text-align-demo align-right">
+    <p><strong>Right Align:</strong> This text is aligned to the right.</p>
+  </div>
+  <div class="text-align-demo align-center">
+    <p><strong>Center Align:</strong> This text is centered.</p>
+  </div>
+  <div class="text-align-demo align-justify">
+    <p><strong>Justify Align:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent semper, leo non efficitur elementum, sapien orci dignissim lectus, sit amet ultricies nunc sapien vel metus.</p>
+  </div>
+  
+  <h2>Text Align Last</h2>
+  <div class="text-align-last-demo">
+    <p>
+      <strong>Text Align Last:</strong> This block demonstrates the 
+      <code>text-align-last</code> property. While the text is justified overall, 
+      the last line of this paragraph is aligned to the right.
+      Lorem ipsum dolor sit amet, 
+      consectetur adipiscing elit. Integer ac odio in nibh cursus tincidunt.
+    </p>
+  </div>
+  
+  <h2>Direction &amp; Unicode-Bidi</h2>
+  <div class="rtl-demo">
+    <p>
+      <strong>RTL &amp; Unicode-Bidi:</strong> هذا نص باللغة العربية لتوضيح خصائص <code>direction</code> و <code>unicode-bidi</code>. يهدف هذا المثال إلى عرض كيف يمكن لعناصر النص أن تظهر من اليمين إلى اليسار.
+    </p>
+  </div>
+  
+  <h2>Vertical Alignment</h2>
+  <div class="vertical-align-demo">
+    <div class="box va-baseline">Baseline</div>
+    <div class="box va-top">Top</div>
+    <div class="box va-middle">Middle</div>
+    <div class="box va-bottom">Bottom</div>
+    <p>
+      The inline boxes above use different <code>vertical-align</code> values.
+    </p>
+  </div>
+  
+</body>
+</html>

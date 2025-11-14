@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Text Decoration Properties Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+    h1 {
+      text-align: center;
+    }
+    .demo-box {
+      margin: 20px auto;
+      width: 80%;
+      padding: 10px;
+      background: #fff;
+      border: 1px solid #ddd;
+    }
+    /* 1. text-decoration-line */
+    .decoration-line {
+      text-decoration-line: underline;
+    }
+    /* 2. text-decoration-color */
+    .decoration-color {
+      text-decoration-line: underline;
+      text-decoration-color: red;
+    }
+    /* 3. text-decoration-style */
+    .decoration-style {
+      text-decoration-line: underline;
+      text-decoration-style: wavy;
+    }
+    /* 4. text-decoration-thickness */
+    .decoration-thickness {
+      text-decoration-line: underline;
+      text-decoration-thickness: 3px;
+    }
+    /* 5. text-decoration shorthand */
+    .decoration-shorthand {
+      /* Combines line, style, color, and thickness */
+      text-decoration: underline dashed blue 2px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Text Decoration Properties Demo</h1>
+  <div class="demo-box decoration-line">
+    <p><strong>text-decoration-line:</strong> This text is underlined using <code>text-decoration-line: underline;</code></p>
+  </div>
+  <div class="demo-box decoration-color">
+    <p><strong>text-decoration-color:</strong> This text has a red underline using <code>text-decoration-color: red;</code></p>
+  </div>
+  <div class="demo-box decoration-style">
+    <p><strong>text-decoration-style:</strong> This text has a wavy underline using <code>text-decoration-style: wavy;</code></p>
+  </div>
+  <div class="demo-box decoration-thickness">
+    <p><strong>text-decoration-thickness:</strong> This text’s underline is 3px thick using <code>text-decoration-thickness: 3px;</code></p>
+  </div>
+  <div class="demo-box decoration-shorthand">
+    <p><strong>text-decoration (shorthand):</strong> This text uses a shorthand that sets an underline, dashed style, blue color, and 2px thickness.</p>
+  </div>
+</body>
+</html>

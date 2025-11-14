@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Elements Attributes Example</title>
+</head>
+<body>
+
+    <h2>Interactive Elements with Attributes</h2>
+
+    <!-- 1. Button Element -->
+    <button type="button" id="myButton" onclick="alert('Button Clicked!')" autofocus disabled>
+        Click Me!
+    </button>
+    <!-- 1. type: Specifies the button type (e.g., button, submit, reset) -->
+    <!-- 2. id: A unique identifier to reference the button in CSS or JavaScript -->
+    <!-- 3. onclick: Specifies a function or script to execute when the button is clicked -->
+    <!-- 4. autofocus: Automatically focuses the button when the page loads -->
+    <!-- 5. disabled: Disables the button so that it cannot be interacted with -->
+
+    <br><br>
+
+    <!-- 2. Input Element -->
+    <input type="text" id="myInput" placeholder="Type something..." required disabled>
+    <!-- 6. type: Defines the type of input (e.g., text, number, password, etc.) -->
+    <!-- 7. id: A unique identifier for the input field -->
+    <!-- 8. placeholder: Text that appears in the input box before the user types anything -->
+    <!-- 9. required: Makes this field mandatory to fill out before submitting the form -->
+    <!-- 10. disabled: Disables the input field so that the user cannot interact with it -->
+
+    <br><br>
+
+    <!-- 3. Anchor Element -->
+    <a href="https://www.example.com" target="_blank" download="example.txt" title="Click to visit Example">
+        Visit Example (Download and Open in New Tab)
+    </a>
+    <!-- 11. href: Specifies the destination URL or file for the link -->
+    <!-- 12. target: Defines where to open the link (_blank opens in a new tab) -->
+    <!-- 13. download: Specifies the default filename for the downloaded file -->
+    <!-- 14. title: Provides additional information about the link (appears as a tooltip when hovering) -->
+
+    <br><br>
+
+    <!-- 4. Select Element -->
+    <label for="car">Choose a car:</label>
+    <select id="car" name="car">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+    </select>
+    <!-- 15. label: Defines a label for the select dropdown -->
+    <!-- 16. id: A unique identifier for the select dropdown -->
+    <!-- 17. name: Defines the name of the dropdown that can be used when submitting the form -->
+    <!-- 18. option: Defines the individual options inside the select dropdown -->
+
+    <br><br>
+
+    <!-- 5. Textarea Element -->
+    <textarea id="myTextarea" rows="4" cols="50" placeholder="Enter your message here..." required></textarea>
+    <!-- 19. id: A unique identifier for the textarea -->
+    <!-- 20. rows: Defines the number of visible text lines (height) -->
+    <!-- 21. cols: Defines the visible width of the textarea -->
+    <!-- 22. placeholder: A prompt inside the textarea when it's empty -->
+    <!-- 23. required: Makes the textarea field mandatory before form submission -->
+
+    <br><br>
+
+    <!-- 6. Form Element -->
+    <form action="/submit" method="POST" enctype="multipart/form-data">
+        <label for="fileUpload">Upload a file:</label>
+        <input type="file" id="fileUpload" name="fileUpload">
+        <!-- 24. action: Defines the URL where the form data will be submitted -->
+        <!-- 25. method: Specifies the HTTP method (GET or POST) used to send the form data -->
+        <!-- 26. enctype: Specifies how the form data should be encoded when submitting (used for file uploads) -->
+        <!-- 27. input type="file": Creates a file input field for uploading files -->
+        <br><br>
+        <button type="submit">Submit</button>
+    </form>
+
+    <br><br>
+
+    <!-- 7. Details and Summary Elements -->
+    <details>
+        <summary>Click to see more</summary>
+        <p>This is additional information that was hidden initially.</p>
+    </details>
+    <!-- 28. details: A container for a collapsible section of content -->
+    <!-- 29. summary: The clickable header that toggles the visibility of the details section -->
+
+</body>
+</html>

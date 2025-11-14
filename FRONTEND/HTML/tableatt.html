@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Table Attributes Example</title>
+</head>
+<body>
+    <h2>Table with Various Attributes</h2>
+
+    <table border="1" cellpadding="10" cellspacing="5" width="80%" align="center">
+        <!-- 1. border: Adds a border to the table -->
+        <!-- 2. cellpadding: Adds space between the cell content and its borders -->
+        <!-- 3. cellspacing: Adds space between individual cells -->
+        <!-- 4. width: Defines the width of the table -->
+        <!-- 5. align: Aligns the table in the center of the page -->
+
+        <caption>Student Information</caption>
+        <!-- 6. caption: Provides a title for the table -->
+
+        <thead>
+            <!-- 7. Thead: Defines the header section of the table -->
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <!-- 8. Tbody: Contains the body content of the table -->
+            <tr>
+                <td>John Doe</td>
+                <td>20</td>
+                <td>A</td>
+            </tr>
+            <tr>
+                <td>Alice Smith</td>
+                <td>22</td>
+                <td>B</td>
+            </tr>
+            <tr>
+                <td>Bob Johnson</td>
+                <td>21</td>
+                <td>C</td>
+            </tr>
+        </tbody>
+
+        <tfoot>
+            <!-- 9. Tfoot: Defines the footer section of the table -->
+            <tr>
+                <td colspan="3" align="center">End of Table</td>
+                <!-- 10. colspan: Makes the cell span multiple columns -->
+                <!-- 11. align: Aligns the text within the footer cell -->
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+</html>

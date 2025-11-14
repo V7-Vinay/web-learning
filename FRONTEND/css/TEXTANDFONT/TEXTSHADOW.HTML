@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Text Shadow Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      /* Simple shadow */
+      text-shadow: 2px 10px 5px rgba(0, 0, 0, 0.5);
+    }
+    p {
+      font-size: 1.2em;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+    .shadow-effect {
+      font-size: 2em;
+      margin: 20px;
+      padding: 20px;
+      background: #fff;
+      display: inline-block;
+      border: 1px solid #ddd;
+      /* Multiple shadows example */
+      text-shadow:
+        2px 2px 3px rgba(0, 0, 0, 0.4),
+        -2px -2px 3px rgba(255, 0, 0, 0.5);
+    }
+    .colored-shadow {
+      font-size: 2em;
+      margin: 20px;
+      padding: 20px;
+      background: #fff;
+      display: inline-block;
+      border: 1px solid #ddd;
+      /* A colored shadow with no blur */
+      text-shadow: 3px 3px 0px #ff5733;
+    }
+  </style>
+</head>
+<body>
+  <h1>Text Shadow Demo</h1>
+  <p>
+    The <code>text-shadow</code> property allows you to add a shadow to text. You can control the horizontal and vertical offsets, the blur radius, and the color of the shadow.
+  </p>
+  <div class="shadow-effect">
+    Multiple Shadows
+  </div>
+  <div class="colored-shadow">
+    Colored Shadow
+  </div>
+</body>
+</html>

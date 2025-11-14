@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Outline Properties Demo</title>
+  <style>
+    body {
+        border: 3px solid salmon;
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      text-align: center;
+      padding: 20px;
+    }
+    .box {
+      width: 200px;
+      height: 100px;
+      margin: 30px auto;
+      padding: 10px;
+      background: #eaeaea;
+      line-height: 100px;
+      border: 2px solid #333;
+    }
+    /* 1. Outline using individual properties */
+    .outline-dotted {
+      outline-style: dotted;
+      outline-color: red;
+      outline-width: 3px;
+      outline-offset: 5px;
+    }
+    /* 2. Outline using shorthand with dashed style */
+    .outline-dashed {
+      outline: 3px dashed green;
+      outline-offset: 5px;
+    }
+    /* 3. Outline using shorthand with solid style */
+    .outline-solid {
+      outline: 3px solid blue;
+      outline-offset: 10px;
+    }
+    /* 4. Outline using shorthand with double style */
+    .outline-double {
+      outline: 4px double purple;
+      outline-offset: 8px;
+    }
+    /* 5. Outline using shorthand with groove style */
+    .outline-groove {
+      outline: 3px groove orange;
+      outline-offset: 5px;
+    }
+    /* 6. Outline set to none */
+    .outline-none {
+      outline: none;
+    }
+    /* 7. Outline set to hidden */
+    .outline-hidden {
+      outline: hidden;
+    }
+  </style>
+</head>
+<body>
+  <h1>CSS Outline Properties Demo</h1>
+  <p>
+    Note: The outline is drawn <strong>outside</strong> the element's border and does not affect its overall dimensions.
+  </p>
+  
+  <div class="box outline-dotted">Dotted Outline</div>
+  <div class="box outline-dashed">Dashed Outline</div>
+  <div class="box outline-solid">Solid Outline</div>
+  <div class="box outline-double">Double Outline</div>
+  <div class="box outline-groove">Groove Outline</div>
+  <div class="box outline-none">No Outline</div>
+  <div class="box outline-hidden">Hidden Outline</div>
+  
+</body>
+</html>

@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Demo</title>
+    <style>
+        /* Apply a background color to the whole page */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Light Gray */
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .box {
+            width: 300px;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* 1. Named Colors */
+        .bg-named { background-color: blue; }
+
+        /* 2. Hex Colors */
+        .bg-hex { background-color: #ff5733; }
+
+        /* 3. RGB Colors */
+        .bg-rgb { background-color: rgb(0, 255, 127); }
+
+        /* 4. RGBA with Transparency */
+        .bg-rgba { background-color: rgba(255, 0, 0, 0.5); }
+
+        /* 5. HSL Colors */
+        .bg-hsl { background-color: hsl(200, 70%, 50%); }
+
+        /* 6. Gradient Background */
+        .bg-gradient {
+            background: linear-gradient(to left, #ff7e5f, #feb47b);
+        }
+
+        /* 7. Radial Gradient */
+        .bg-radial {
+            background: radial-gradient(circle, #ff512f, #dd2476);
+        }
+
+        /* 8. Multiple Background Colors */
+        .bg-multiple {
+            background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5));
+        }
+
+        /* 9. Applying Background to Text */
+        .text-bg {
+            background-color: yellow;
+            color: black;
+            padding: 10px;
+            display: inline-block;
+            border-radius: 5px;
+        }
+
+        /* 10. Button with Background Color */
+        .btn {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Understanding Background Colors in CSS</h1>
+
+    <div class="container">
+        <div class="box bg-named">Named Color (Blue)</div>
+        <div class="box bg-hex">HEX Color (#ff5733)</div>
+        <div class="box bg-rgb">RGB Color (0, 255, 127)</div>
+        <div class="box bg-rgba">RGBA (Red with Transparency)</div>
+        <div class="box bg-hsl">HSL Color (Blue Tone)</div>
+        <div class="box bg-gradient">Linear Gradient</div>
+        <div class="box bg-radial">Radial Gradient</div>
+        <div class="box bg-multiple">Multiple Background Colors</div>
+    </div>
+
+    <br>
+
+    <div class="text-bg">Background Color Applied to Text</div>
+    <br><br>
+
+    <button class="btn">Click Me</button>
+
+</body>
+</html>

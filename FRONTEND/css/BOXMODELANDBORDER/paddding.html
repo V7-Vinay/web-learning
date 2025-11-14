@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Understanding Padding in CSS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      width: 90%;
+      margin: 0 auto;
+      background: #fff;
+      border: 2px solid #ccc;
+      padding: 20px;
+    }
+    .box {
+      background: #4CAF50;
+      color: white;
+      margin: 20px auto;
+      border: 2px solid #333;
+      width: 300px;
+      text-align: center;
+      line-height: 1.5;
+    }
+    /* 1. No Padding */
+    .padding-none {
+      padding: 0;
+    }
+    /* 2. Uniform Padding */
+    .padding-uniform {
+      padding: 20px; /* Same padding on all sides */
+    }
+    /* 3. Individual Padding */
+    .padding-individual {
+      padding-top: 10px;
+      padding-right: 20px;
+      padding-bottom: 30px;
+      padding-left: 40px;
+    }
+    /* 4. Shorthand Padding (Two Values) */
+    .padding-shorthand {
+      padding: 15px 30px; /* 15px for top & bottom, 30px for left & right */
+    }
+  </style>
+</head>
+<body>
+  <h1>Understanding Padding in CSS</h1>
+  <div class="container">
+    <h2>No Padding</h2>
+    <div class="box padding-none">
+      Box with No Padding
+    </div>
+    
+    <h2>Uniform Padding</h2>
+    <div class="box padding-uniform">
+      Box with 20px Padding on All Sides
+    </div>
+    
+    <h2>Individual Padding</h2>
+    <div class="box padding-individual">
+      Box with 10px Top, 20px Right, 30px Bottom, and 40px Left Padding
+    </div>
+    
+    <h2>Shorthand Padding (Two Values)</h2>
+    <div class="box padding-shorthand">
+      Box with 15px Padding (Top & Bottom) and 30px Padding (Left & Right)
+    </div>
+  </div>
+</body>
+</html>

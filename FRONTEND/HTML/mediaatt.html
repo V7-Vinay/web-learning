@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Attributes in HTML</title>
+</head>
+<body>
+
+    <h1>HTML Media Attributes Demo</h1>
+
+    <!-- AUDIO ELEMENT DEMO -->
+    <h2>Audio Example</h2>
+    <audio controls autoplay muted loop preload="metadata">
+        <!-- 1. controls: Displays play, pause, volume, etc. -->
+        <!-- 2. autoplay: Starts playback automatically (muted by default) -->
+        <!-- 3. muted: Mutes audio by default -->
+        <!-- 4. loop: Repeats the audio when it ends -->
+        <!-- 5. preload: Preloads metadata, audio, or nothing -->
+        
+        <source src="audio-sample.mp3" type="audio/mpeg">
+        <source src="audio-sample.ogg" type="audio/ogg">
+        <!-- 6. type: Specifies the MIME type of the media file -->
+        Your browser does not support the audio tag.
+    </audio>
+
+    <!-- VIDEO ELEMENT DEMO -->
+    <h2>Video Example</h2>
+    <video width="600" height="340" controls poster="thumbnail.jpg" autoplay muted loop preload="auto">
+        <!-- 1. width/height: Specifies video dimensions -->
+        <!-- 2. controls: Shows video controls (play, pause, fullscreen) -->
+        <!-- 3. poster: Image displayed before video plays -->
+        <!-- 4. autoplay: Automatically starts video playback -->
+        <!-- 5. muted: Mutes the video by default -->
+        <!-- 6. loop: Replays video after it ends -->
+        <!-- 7. preload: Preloads video (auto, metadata, none) -->
+        
+        <source src="sample-video.mp4" type="video/mp4">
+        <source src="sample-video.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- EMBEDDING MEDIA FROM DIFFERENT FORMATS -->
+    <h2>Responsive Media with Picture</h2>
+    <picture>
+        <!-- 8. media: Applies sources based on screen width -->
+        <!-- 9. srcset: Defines different image files for different resolutions -->
+        <source media="(min-width: 1200px)" srcset="large.jpg">
+        <source media="(min-width: 768px)" srcset="medium.jpg">
+        <img src="small.jpg" alt="Responsive Image">
+    </picture>
+
+    <!-- EMBEDDING MEDIA WITH IFAME -->
+    <h2>Embedding YouTube Video</h2>
+    <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/tgbNymZ7vqY" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+    </iframe>
+
+</body>
+</html>

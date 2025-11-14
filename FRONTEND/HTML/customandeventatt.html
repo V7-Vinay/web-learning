@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom and Event Attributes</title>
+</head>
+<body>
+
+    <!-- Custom Attribute Example -->
+    <div id="customDiv" custom-attribute="This is a custom attribute" onclick="showCustomAttribute()">Click me to see the custom attribute</div>
+    <!-- custom-attribute is a user-defined attribute, not part of standard HTML -->
+
+    <!-- Event Attribute Example -->
+    <button onclick="displayMessage()">Click me to trigger event</button>
+    <button onmouseover="changeColor()" onmouseout="resetColor()">Hover over me!</button>
+
+    <p id="message"></p>
+
+    <script>
+        // Handling custom attribute
+        function showCustomAttribute() {
+            var customDiv = document.getElementById("customDiv");
+            alert("Custom Attribute Value: " + customDiv.getAttribute("custom-attribute"));
+        }
+
+        // Handling event attribute (onclick)
+        function displayMessage() {
+            document.getElementById("message").innerHTML = "Event triggered: Button clicked!";
+        }
+
+        // Event for mouseover and mouseout
+        function changeColor() {
+            document.getElementById("customDiv").style.backgroundColor = "lightblue";
+        }
+
+        function resetColor() {
+            document.getElementById("customDiv").style.backgroundColor = "";
+        }
+    </script>
+
+</body>
+</html>

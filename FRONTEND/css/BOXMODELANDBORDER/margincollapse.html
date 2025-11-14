@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Margin Collapse Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      padding: 20px;
+    }
+    .container {
+      background: #fff;
+      border: 2px dashed #666;
+      padding: 10px;
+      margin-bottom: 30px;
+    }
+    /* Demonstration for adjacent siblings */
+    .sibling {
+      background: #ffc0c0;
+      margin: 20px 0; /* Top and bottom margins of 20px */
+      padding: 10px;
+      border: 2px solid #cc0000;
+    }
+    /* Parent element for margin collapse demonstration */
+    .parent {
+      background: #e0e0e0;
+      margin: 40px 0; /* Parent's external margin */
+      border: 2px solid #333;
+    }
+    /* Use this class on parent when you want no padding (to allow collapse with child) */
+    .no-padding {
+      padding: 0;
+    }
+    /* Child element with its own margins */
+    .child {
+      background: #c0ffc0;
+      margin: 30px 0; /* Child's top and bottom margins */
+      padding: 10px;
+      border: 2px solid #009900;
+    }
+  </style>
+</head>
+<body>
+  <h1>Understanding Margin Collapse in CSS</h1>
+  
+  <h2>Adjacent Sibling Elements</h2>
+  <div class="container">
+    <div class="sibling" style="margin-bottom: 30px;">Sibling 1: Margin 20px top & bottom</div>
+    <div class="sibling">Sibling 2: Margin 20px top & bottom</div>
+    <p>
+      Note: When two block-level siblings are stacked vertically, their adjacent vertical margins collapse. Instead of adding 20px + 20px (40px), only the larger margin (20px) is applied between them.
+    </p>
+  </div>
+  
+  <h2>Parent and Child Margin Collapse (No Padding)</h2>
+  <div class="container">
+    <div class="parent no-padding">
+        <p>Parent element (no padding) with an external margin of 40px.</p>
+      <div class="child">
+        Child element with 30px margin on top and bottom.
+      </div>
+      <p>
+        Because the parent has no padding or border on its top edge, the top margin of the child may collapse with the parent's margin.
+      </p>
+    </div>
+  </div>
+  
+  <h2>Parent and Child (With Padding)</h2>
+  <div class="container">
+    <div class="parent" style="padding: 10px;">
+      <p>Parent element (with 10px padding) with an external margin of 40px.</p>
+      <div class="child">
+        Child element with 30px margin on top and bottom.
+      </div>
+      <p>
+        With padding present, the parent's margin and child's margin do not collapse, so the full margins are maintained.
+      </p>
+    </div>
+  </div>
+  
+</body>
+</html>
