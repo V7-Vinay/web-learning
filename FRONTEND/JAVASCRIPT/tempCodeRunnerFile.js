@@ -1,1 +1,0 @@
-console.log(addTwo(5))

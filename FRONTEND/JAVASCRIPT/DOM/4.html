@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <ul>
+        <li>
+            java scripit
+        </li>
+    </ul>
+</body>
+<script>
+    function addLanguage(l){
+       const x= document.createElement('li');
+        x.innerHTML=`${l}`
+        document.querySelector('ul').appendChild(x)
+        }
+        addLanguage('series panda')
+
+        function addOptimizedLanguage(langname){
+            const x= document.createElement('li');
+            x.appendChild(document.createTextNode(langname))
+            document.querySelector('ul').appendChild(x)
+        }
+        addOptimizedLanguage('ruby')
+
+        // remove / edit
+
+       const secondLang = document.querySelector("li:nth-child(2)")
+        console.log(secondLang);
+
+    //   secondLang.innerHTML='anime'
+       const newli= document.createElement('li')
+       newli.textContent='anime' 
+       secondLang.replaceWith(newli)
+
+       const firstLang=document.querySelector('li:nth-child(1)')
+       firstLang.outerHTML= '<li>type script</li>'
+
+       const lastLang =document.querySelector('li:last-child')
+       lastLang.remove()
+ </script>
+</html>
