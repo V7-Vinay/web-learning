@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>SET INTERVALS </h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+
+    <script>
+        let name
+        let funcname
+     const start=  document.querySelector('#start').addEventListener('click',function(){
+         const sayname=(h)=>{
+            console.log(h," function vinay")
+        }
+      name=  setInterval(function(){
+        console.log('vinay'); 
+      },1000)
+
+      funcname= setInterval(sayname,3000,"hi")
+     })
+ const stop=document.querySelector('#stop').addEventListener('click',function(){
+        clearInterval(name)
+        clearInterval(funcname)
+     })
+     
+
+    </script>
+    
+</body>
+</html>

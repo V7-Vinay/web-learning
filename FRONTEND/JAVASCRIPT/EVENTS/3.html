@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <h1>SET INTERVALS AND TIMEOUT</h1>
+    <button id="stop">stop</button>
+    <script>
+        const sayvinay=() => {//can also call the api's
+            console.log("vinay referecnce");
+        }
+
+        setTimeout(() => {//can also call the api's
+            console.log("vinay");
+        }, 2000);
+
+        setTimeout(sayvinay,3000)
+
+        const changeh1=()=>{
+            document.querySelector('h1').innerHTML="KEEP GOING U ARE AMAZING"
+        }
+       const h1Change= setTimeout(changeh1,5000)
+       document.querySelector('#stop').addEventListener('click',function(){
+          clearInterval(h1Change)
+          console.log("stopped")
+       });
+    </script>
+    
+</body>
+</html>

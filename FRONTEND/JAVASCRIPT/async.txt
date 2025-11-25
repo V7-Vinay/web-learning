@@ -1,0 +1,12 @@
+JAVA SCRIPT:
+         Synchronous
+         Single Thread
+
+EXECUTION CONTENXT:
+        one line of execution code at a time
+
+BLOCKING CODE:
+        read file syncronous
+NON BLOCKING CODE:
+        read file asyncronous
+        

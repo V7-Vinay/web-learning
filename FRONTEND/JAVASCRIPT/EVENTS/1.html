@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTS</title>
+</head>
+
+<body id="area" style="background-color:#414141; color: aliceblue; height:100vh; margin:0; position:relative;">
+    
+    <h2>Amazing image</h2>
+
+    <div>
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg"></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg"></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg"></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg"></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+
+<script>
+const area = document.getElementById("area");
+
+area.addEventListener("click", function(event) {
+    const circle = document.createElement("div");
+
+    circle.style.position = "absolute";
+    circle.style.width = "12px";
+    circle.style.height = "12px";
+    circle.style.borderRadius = "50%";
+    circle.style.background = "red";
+
+    circle.style.left = event.pageX - 6 + "px";//event.pagex ,y are used for pointer loc of mouse
+    circle.style.top = event.pageY - 6 + "px";
+
+    area.appendChild(circle);  // ✔ add circle INSIDE area, not body
+    setTimeout(() => {
+    circle.remove();
+}, 700);   // 2000 ms = 2 seconds
+});
+
+//type ,time stamp , defaultprevented ,target
+//toelement ,srcelement, currentTarget
+//clientx,clienty,scrreenx ,screeny
+//altkey,ctrkey,shiftkey,keycode
+
+//false - event bubbling  it goes like child to parent
+//true-event capturing  and this goes like parent to child 
+
+document.getElementById('images').addEventListener('click',function(e){
+    console.log("clicked inside the ul");
+    
+},false)
+
+document.getElementById('owl').addEventListener('click',function(e){
+    console.log("owl inside the ul");
+   // e.stopPropagation()  if it is there then image not deleted 
+},false)
+
+document.getElementById('google').addEventListener('click',function(e){
+    e.preventDefault();//prevents the default behaviour stoped the anchor tags from going to google
+    e.stopPropagation()
+    console.log("google clicked")
+})
+
+
+document.querySelector('#images').addEventListener('click',function(e){
+    console.log(e.target.tagName);
+    if(e.target.tagName=='IMG'){// image spill over in the sense if if condition isnt given then if clicked on li part 
+    let removeIt=e.target.parentNode//then its parent will be ul so all parts of ul will be removed
+   removeIt.remove()
+}
+})
+</script>
+
+</body>
+</html>
