@@ -33,6 +33,13 @@ function validateGuess(guess){
         alert('please enter a number LESS than 101')
     }else{
         prevGuess.push(guess)
+         if (guess === randomNum) {
+        cleanguess(guess);
+        displayMessage("you guessed it right");
+        endGame();
+        return;
+        }
+
         if(count==9){    
             cleanguess(guess)
             displayMessage(`game over : number was${randomNum}`)
