@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const requestUrl='https://api.github.com/users/V7-Vinay'
+      const hxr=  new XMLHttpRequest();
+     hxr.open('GET',requestUrl)//METHOD , STRING
+    hxr.onreadystatechange=function(){
+        console.log(hxr.readyState); 
+        if(hxr.readyState===4){
+            const data=JSON.parse(this.responseText)
+            console.log(typeof data)
+            console.log(this.responseText);
+            console.log(data.followers);
+        } 
+    }
+      hxr.send();
+
+      //run time  inject the console.log in javascript env(nodejs/v8engine)
+    </script>
+</body>
+</html>
