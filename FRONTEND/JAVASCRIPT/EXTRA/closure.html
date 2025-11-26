@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<button id="btn">Click Me</button>
+
+<script>
+function colorChanger() {
+  let index = 0;                  // <-- this value is remembered (closure)
+  const colors = ["red", "blue", "green", "orange"];
+
+  return function () {            // <-- inner function = closure
+    //document.getElementById("btn").style.background = colors[index];
+    document.body.style.backgroundColor = colors[index];
+
+    index = (index + 1) % colors.length;   // cycle colors
+  };
+}
+
+const changeColor = colorChanger();   // closure created
+document.getElementById("btn").addEventListener("click", changeColor);
+</script>
+
+</body>
+</html>
