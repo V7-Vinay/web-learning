@@ -1,0 +1,24 @@
+// Version
+
+4.18.2
+
+3rd part = Minor Fixes(optional  update) if any cahnges doest mean that much
+
+2nd part = Recommended bug fix / a security fix
+imp to update
+
+1st part = major Update
+
+if u have made in 4 version no need to change to 5 
+it may not run u r code
+
+if new project u can update
+
+^ - install any part 2 , 3 updates but not 1 ie (4.)
+~ - only 3rd bit
+
+
+RESTFULL / REST API :
+
+works on client and server architecture
+ 
